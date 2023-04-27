@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hyphens</title>
+</head>
+
+<body>
+<input type="text" id="textInput">
+<button onclick="addHyphens()">Hyphen</button>
+<div id="output"></div>
+</body>
+  <script>function addHyphens() {
+  // Get the user input from the text input field
+  const inputText = document.getElementById("textInput").value;
+  
+  // Split the input text into an array of words
+  const words = inputText.split(" ");
+  
+  // Join the array of words with hyphens between each word
+  const hyphenatedText = words.join("-");
+  
+  // Create a new paragraph element to display the hyphenated text
+  const outputElement = document.getElementById("output");
+  const newParagraph = document.createElement("p");
+  newParagraph.innerText = hyphenatedText;
+  
+  // Append the new paragraph element to the output container
+  outputElement.appendChild(newParagraph);
+}</script>
+
+</html>
